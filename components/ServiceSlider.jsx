@@ -16,28 +16,33 @@ import "swiper/css/pagination";
 const serviceData = [
   {
     Icon: RxCrop,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Motion Graphik",
+    description: "Create a platform with the best and coolest quality from us.",
   },
   {
     Icon: RxPencil2,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "UI/UX Designer",
+    description: "We provide UI/UX Design services, and of course with the best quality",
   },
   {
     Icon: RxDesktop,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Graphik Designer",
+    description: "We provide Graphic Design services, with the best designers",
   },
   {
     Icon: RxReader,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Development",
+    description: "Create a platform with the best and coolest quality from us.",
   },
   {
     Icon: RxRocket,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Photography",
+    description: "We provide Photography services, and of course with the best quality",
+  },
+  {
+    Icon: RxRocket,
+    title: "Videography",
+    description: "We provide UI/UX Design services, and of course with the best quality",
   },
 ];
 

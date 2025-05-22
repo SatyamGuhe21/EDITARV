@@ -31,8 +31,7 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempora eligendi, quisquam tempore sint reiciendis.
+              At Editarv, we transform ideas into powerful visual stories. Our services are designed to elevate your brand through creativity, precision, and passion. Whether you're a startup, a growing business, or an established brand, we offer tailored visual solutions that make an impact.
             </motion.p>
           </div>
 

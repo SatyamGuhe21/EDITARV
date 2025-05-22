@@ -1,92 +1,79 @@
-import Image from "next/image";
-import { FaQuoteLeft } from "react-icons/fa";
-import { Navigation, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-const testimonialData = [
+const pricingData = [
   {
-    image: "/t-avt-1.png",
-    name: "Anne Smith",
-    position: "Customer",
-    message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+    plan: "Quick Edit Lift",
+    price: "$15",
+    features: [
+      "Delivery Time: 1 Day",
+      "Number of Revisions: 3",
+      "Footage Provided (Minutes): 5",
+      "Running Time (Minutes): 1",
+      "Color Grading",
+      "Sound Design & Mixing",
+      "Subtitles",
+    ],
   },
   {
-    image: "/t-avt-2.png",
-    name: "Jane Doe",
-    position: "Customer",
-    message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+    plan: "Viral Maker",
+    price: "$90",
+    features: [
+      "Delivery Time: 1 Day",
+      "Number of Revisions: Unlimited",
+      "Footage Provided (Minutes): 15",
+      "Running Time (Minutes): 6",
+      "Color Grading",
+      "Sound Design & Mixing",
+      "Subtitles",
+    ],
   },
   {
-    image: "/t-avt-3.png",
-    name: "Jhon Doe",
-    position: "Customer",
-    message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+    plan: "Engagement Enhancer",
+    price: "$40",
+    features: [
+      "Delivery Time: 1 Day",
+      "Number of Revisions: 5",
+      "Footage Provided (Minutes): 10",
+      "Running Time (Minutes): 2",
+      "Color Grading",
+      "Sound Design & Mixing",
+      "Subtitles",
+    ],
   },
+  
 ];
-
-const TestimonialSlider = () => {
+const Pricing = () => {
   return (
-    <Swiper
-      navigation
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Navigation, Pagination]}
-      className="h-[400px]"
-    >
-      {testimonialData.map((person, i) => (
-        <SwiperSlide key={i}>
-          <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
-            {/* avatar, name, position */}
-            <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
-              <div className="flex flex-col justify-center text-center">
-                {/* avatar */}
-                <div className="mb-2 mx-auto">
-                  <Image
-                    src={person.image}
-                    width={100}
-                    height={100}
-                    alt={person.name}
-                  />
-                </div>
+    <section className="/30 py-20 text-center">
+      <div className="container mx-auto">
+        {/* <h2 className="text-3xl md:text-4xl font-bold mb-12 text-white">
+          Choose your <span className="text-accent">plan</span>
+        </h2> */}
 
-                {/* name */}
-                <div className="text-lg">{person.name}</div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {pricingData.map((plan, i) => (
+            <div
+              key={i}
+              className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col items-center shadow-md hover:scale-105 transition-transform duration-300"
+            >
+              <h3 className="text-xl font-semibold text-white mb-2">
+                {plan.plan}
+              </h3>
+              <p className="text-2xl font-bold text-accent mb-4">{plan.price}</p>
 
-                {/* position */}
-                <div className="text-[12px] uppercase font-extralight tracking-widest">
-                  {person.position}
-                </div>
-              </div>
+              <ul className="text-white/80 text-sm space-y-2 mb-6">
+                {plan.features.map((feature, idx) => (
+                  <li key={idx}>• {feature}</li>
+                ))}
+              </ul>
+
+              <button className="btn border border-accent text-accent hover:bg-accent hover:text-white transition-all duration-300 px-6 py-2 rounded-full">
+                Get Started
+              </button>
             </div>
-
-            {/* quote & message */}
-            <div className="flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">
-              {/* quote icon */}
-              <div className="mb-4">
-                <FaQuoteLeft
-                  className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0"
-                  aria-aria-hidden
-                />
-              </div>
-
-              {/* message */}
-              <div className="xl:text-lg text-center md:text-left">
-                {person.message}
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default TestimonialSlider;
+export default Pricing;

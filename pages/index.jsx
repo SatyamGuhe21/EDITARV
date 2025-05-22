@@ -20,8 +20,8 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Hi, i'm <br /> {" "}
-            <span className="text-accent">ATHARV SULAKIYA</span>
+           
+<span className="text-accent">FREEDOM FOR YOUR <br /> {" "} CREATIVE IDEAS</span>
           </motion.h1>
           <motion.h3
             variants={fadeIn("down", 0.2)}
@@ -30,7 +30,7 @@ const Home = () => {
             exit="hidden"
             className="h3"
           >
-            FREEDOM FOR YOUR CREATIVE IDEAS. <br /> {" "}
+           Hii I am Atharv Sulakhiya <br /> {" "}
             <span className="text-accent"></span>
           </motion.h3>
 
@@ -42,7 +42,8 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Precision in motion and 3d works , A online platform were we providing services like video editing , Motion graphics , CGI etc
+           Precision in motion and 3d works , A online platform were we providing services like video editing , Motion graphics , CGI etc
+
           </motion.p>
 
           {/* btn */}
