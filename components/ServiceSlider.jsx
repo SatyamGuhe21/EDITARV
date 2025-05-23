@@ -16,34 +16,20 @@ import "swiper/css/pagination";
 const serviceData = [
   {
     Icon: RxCrop,
-    title: "Motion Graphik",
-    description: "Create a platform with the best and coolest quality from us.",
+    title: "video editing",
+    description: "Transforming raw footage into captivating stories with expert video editing skills.",
   },
   {
     Icon: RxPencil2,
-    title: "UI/UX Designer",
-    description: "We provide UI/UX Design services, and of course with the best quality",
+    title: "motion graphics ",
+    description: " Bringing visuals to life with dynamic and engaging motion graphic designs.",
   },
   {
     Icon: RxDesktop,
-    title: "Graphik Designer",
-    description: "We provide Graphic Design services, with the best designers",
+    title: "3d animation",
+    description: "Creating immersive visual experiences with stunning and realistic 3D animations.",
   },
-  {
-    Icon: RxReader,
-    title: "Development",
-    description: "Create a platform with the best and coolest quality from us.",
-  },
-  {
-    Icon: RxRocket,
-    title: "Photography",
-    description: "We provide Photography services, and of course with the best quality",
-  },
-  {
-    Icon: RxRocket,
-    title: "Videography",
-    description: "We provide UI/UX Design services, and of course with the best quality",
-  },
+  
 ];
 
 const ServiceSlider = () => {

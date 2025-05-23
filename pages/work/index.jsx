@@ -29,8 +29,7 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempora eligendi, quisquam tempore sint reiciendis.
+              We deliver dynamic video edits, engaging motion graphics, and realistic 3D animations. Our branding includes logo and color design. We create responsive web interfaces, conversion-focused landing pages, e-commerce layouts, and striking digital ad banners.
             </motion.p>
           </div>
 

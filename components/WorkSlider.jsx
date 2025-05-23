@@ -14,23 +14,23 @@ const workSlides = {
       images: [
         {
           title: "title",
-          path: "/thumb1.jpg",
-          link: "http://example.com",
+          path: "/work1.gif",
+          link: "",
         },
         {
           title: "title",
-          path: "/thumb2.jpg",
-          link: "http://example.com",
+          path: "/work2.gif",
+          link: "",
         },
         {
           title: "title",
-          path: "/thumb3.jpg",
-          link: "http://example.com",
+          path: "/work3.gif",
+          link: "",
         },
         {
           title: "title",
-          path: "/thumb4.jpg",
-          link: "http://example.com",
+          path: "/work4.gif",
+          link: "",
         },
       ],
     },
