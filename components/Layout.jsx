@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
           content="react, next, nextjs, html, css, javascript, js, modern-ui, modern-ux, portfolio, framer-motion, 3d-website, particle-effect"
         />
         <meta name="author" content="ATHARV SULAKIYA" />
-        <meta name="theme-color" content="#f13024" />
+        <meta name="theme-color" content="#d4af37" />
       </Head>
 
       <TopLeftImg />
