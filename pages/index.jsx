@@ -41,7 +41,7 @@ const Header = () => {
 const ParticlesContainer = () => {
   return (
     <div className="w-full h-full absolute translate-z-0">
-      <div className=""></div>
+      <div className="particles-bg"></div>
       <style jsx>{`
         .particles-bg {
           position: absolute;
@@ -50,14 +50,15 @@ const ParticlesContainer = () => {
           width: 100%;
           height: 100%;
           background-image: 
-            radial-gradient(2px 2px at 20px 30px, #eee, transparent),
-            radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.3), transparent),
-            radial-gradient(1px 1px at 90px 40px, #fff, transparent),
-            radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.3), transparent),
-            radial-gradient(2px 2px at 160px 30px, #fff, transparent);
+            radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.1), transparent),
+            radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.05), transparent),
+            radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.1), transparent),
+            radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.05), transparent),
+            radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.1), transparent);
           background-repeat: repeat;
           background-size: 200px 100px;
           animation: sparkle 3s linear infinite;
+          z-index: 2;
         }
         @keyframes sparkle {
           from { transform: translateY(0px); }
@@ -216,7 +217,9 @@ const Home = () => {
           margin-bottom: 20px;
           letter-spacing: -2px;
           line-height: 0.9;
-          text-shadow: 0 0 30px rgba(255,255,255,0.1);
+          text-shadow: 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(212,175,55,0.2);
+          z-index: 10;
+          position: relative;
         }
         
         .subtitle {
@@ -225,6 +228,9 @@ const Home = () => {
           letter-spacing: 3px;
           font-weight: 400;
           text-transform: uppercase;
+          text-shadow: 0 0 20px rgba(212,175,55,0.5);
+          z-index: 10;
+          position: relative;
         }
         
         .translate-z-0 {
@@ -237,6 +243,26 @@ const Home = () => {
         
         .flex-wrap {
           flex-wrap: wrap;
+        }
+        
+        .bg-main {
+          background-image: url('/bg.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          position: relative;
+        }
+        
+        .bg-main::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(10, 10, 10, 0.7);
+          z-index: 1;
         }
         
         @media (min-width: 768px) {
@@ -306,6 +332,10 @@ const Home = () => {
             font-size: 14px;
             letter-spacing: 2px;
           }
+          
+          .bg-main {
+            background-attachment: scroll;
+          }
         }
         
         .font-sora .xl\:max-w-md .backdrop-blur-sm{
@@ -340,12 +370,15 @@ const Home = () => {
         }
       `}</style>
 
-      <div className="h-full" style={{ background: "#0a0a0a" }}>
+      <div className="h-full bg-main">
         {/* Header */}
         <Header />
 
         {/* Main Content */}
-        <div className="w-full h-full flex flex-col justify-center items-center text-center relative">
+        <div
+          className="w-full h-full flex flex-col justify-center items-center text-center relative"
+          style={{ zIndex: 5 }}
+        >
           {/* Particles */}
           <ParticlesContainer />
 

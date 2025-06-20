@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
         />
         <meta name="author" content="ATHARV SULAKIYA" />
         <meta name="theme-color" content="#d4af37" />
-      </Head>
+      </Head> 
 
       <TopLeftImg />
       <Nav />
